@@ -2,7 +2,7 @@ service: reddelete-hqtrackbot
 
 provider:
   name: aws
-  runtime: python3.8
+  runtime: python3.7
   region: us-west-1
   stage: prod
 
