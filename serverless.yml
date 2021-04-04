@@ -1,4 +1,5 @@
 service: reddelete-hqtrackbot
+variablesResolutionMode: 20210326
 
 provider:
   name: aws
@@ -13,10 +14,10 @@ functions:
       # Invoke Lambda function periodically
       - schedule: rate(12 hours)
     environment:
-      REDDIT_CLIENT_ID: ${ssm:RD_REDDIT_CLIENT_ID~true}
-      REDDIT_CLIENT_SECRET: ${ssm:RD_REDDIT_CLIENT_SECRET~true}
-      REDDIT_USERNAME: ${ssm:RD_REDDIT_USERNAME~true}
-      REDDIT_PASSWORD: ${ssm:RD_REDDIT_PASSWORD~true}
+      REDDIT_CLIENT_ID: ${ssm:RD_REDDIT_CLIENT_ID}
+      REDDIT_CLIENT_SECRET: ${ssm:RD_REDDIT_CLIENT_SECRET}
+      REDDIT_USERNAME: ${ssm:RD_REDDIT_USERNAME}
+      REDDIT_PASSWORD: ${ssm:RD_REDDIT_PASSWORD}
       DELETE_THRESHOLD: 0
 
 plugins:
